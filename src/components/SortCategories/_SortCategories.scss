@@ -1,0 +1,46 @@
+@import '../mixins';
+
+.sort{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  &__categories{
+    background-color: $grey;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.171);
+    
+    border-radius: 12px;
+    padding: 5px 20px 5px 20px;
+    
+    .active{
+      background-color: #212121;
+      color: white;
+    }
+  
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      
+      margin-left:  0;
+      padding-left: 0;
+      
+      li{
+        @include sort-font-styles;
+  
+        border: 1px solid #212121;
+        border-radius: 12px;
+        list-style-type: none;
+  
+        margin: 8px;
+        padding: 10px;
+        
+        cursor: pointer;
+      }
+    }
+  }
+  
+
+  
+}

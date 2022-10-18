@@ -1,0 +1,33 @@
+@import '../../components/mixins';
+
+.not-found-page{
+  margin: 0 auto;
+  padding: 62px;
+
+  max-width: 500px;
+
+  border-radius: 12px;
+  border: 1px solid #888888;
+
+  background: $grey;
+  color: #2e2e2e;
+  
+  text-align: center;
+  p{
+    font-size: 42px;
+    font-weight: 700;
+  }
+  button{
+    @include button-style;
+
+    padding: 10px;
+
+    width: 200px;
+    height: 50px;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    color: rgb(46, 46, 46);
+  }
+}

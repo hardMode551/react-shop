@@ -1,0 +1,49 @@
+@import '../mixins';
+
+.formBlock{
+  @include info-Block-style;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 180px;
+
+  @media (max-width: 820px) {
+    border: 1px solid red;
+    padding: 55px;
+    height: 80px;
+  }
+  
+  h1{
+
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+  }
+  input{
+    width: 155px;
+    height: 30px;
+
+    margin: 20px;
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+
+    color: #666565;
+  }
+
+  button{
+    width: 185px;
+    height: 35px;
+
+    @include button-style;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}

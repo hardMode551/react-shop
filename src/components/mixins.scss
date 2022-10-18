@@ -1,0 +1,33 @@
+@mixin button-style {
+  background: #D7B399;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  
+  &:hover{
+    background-color: #f0aca6;
+  }
+  &:active{
+    background-color: #f3c6c2;
+    transform: translateY(1px);
+  }
+}
+
+@mixin info-Block-style {
+  background-color: #212121;
+  color: #FFFFFF;
+  
+  margin-top: 50px;
+
+}
+
+@mixin sort-font-styles {
+  font-weight: 500;
+  font-size: 16px;
+}
+//#d7b39970 another variant background cards
+$background-card: #dbd9d4;
+$red: #D84033;
+$grey: #F9F6F1;
+
