@@ -1,8 +1,10 @@
 import React from 'react';
 import ContentLoader from 'react-content-loader';
+import '../Scss/_Skeleton.scss';
 
 const Skeleton = (props) => (
   <ContentLoader
+    style={{ width: '100%' }}
     rtl
     speed={2}
     width={250}

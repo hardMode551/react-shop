@@ -1,12 +1,17 @@
 @import '../mixins';
 
 .sort{
-  position: relative;
+
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  justify-content: flex-end;
+
+  @media screen and (max-width: 1080px) {
+    justify-content: center;
+  }
 
   &__categories{
+    width: 100%;
     background-color: $grey;
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.171);
     

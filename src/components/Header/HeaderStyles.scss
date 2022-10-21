@@ -20,7 +20,7 @@ header{
     
     cursor: pointer;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1020px) {
       display: block;
     }
       &::before{
@@ -55,7 +55,7 @@ header{
   margin:  12px 0 39px 0;
 
     .dropdown {
-      @media (max-width: 1200px) {
+      @media screen and (max-width: 1020px) {
         display: none;
       }
       .dropbtn:hover{
@@ -111,11 +111,17 @@ header{
 }
 
 .header__logo {
-  position: absolute; 
+  position: sticky;
   left: 50%; 
   transform: translateX(-50%);
 
-  
+
+  @media (max-width: 910px) {
+
+  }
+  @media (max-width: 640px) {
+    
+  }
   }
 
   .header__links{
@@ -127,7 +133,7 @@ header{
     
     .header__links__payment,
     .header__links__delivery{
-      @media (max-width: 720px) {
+      @media screen and (max-width: 819px) {
         display: none;
       }
     }

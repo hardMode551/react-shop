@@ -13,6 +13,8 @@ export const CardBlock = () => {
 
   const categoryId = useSelector((state) => state.category.categoryId);
   const sortType = useSelector((state) => state.sort.sortId);
+  const searchValue = useSelector((state) => state.search.searchValue);
+
   const category = categoryId > 0 ? `category=${categoryId}` : '';
 
   React.useEffect(() => {
@@ -23,22 +25,28 @@ export const CardBlock = () => {
 
     axios
       .get(
-        `https://6341d46d20f1f9d7997a8302.mockapi.io/items?p=1&l=8&${category}&sortBy=${sortBy}&order=${order}`,
+        `https://6341d46d20f1f9d7997a8302.mockapi.io/items?${category}&sortBy=${sortBy}&order=${order}`,
       )
       .then((res) => {
         setItems(res.data);
         setIsLoading(false);
       });
-  }, [category, sortType]);
-  //sortType,
+  }, [category, sortType, searchValue]);
+
+  const skeleton = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
+  const card = items
+    .filter((obj) => {
+      if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
+        return true;
+      }
+      return false;
+    })
+    .map((obj) => <Cards key={obj.id} {...obj} />);
 
   return (
     <>
-      <div className="card">
-        {isLoading
-          ? [...new Array(8)].map((_, index) => <Skeleton key={index} />)
-          : items.map((obj) => <Cards key={obj.id} {...obj} />)}
-      </div>
+      <div className="card">{isLoading ? skeleton : card}</div>
+
       {/* <Paginate onChangePage={(num) => setPage(num)} /> */}
     </>
   );

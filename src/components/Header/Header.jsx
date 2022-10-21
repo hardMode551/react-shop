@@ -48,10 +48,10 @@ export const Header = () => {
           </Link>
 
           <div className="header__links">
-            <a href="/" className="header__links__payment">
+            <a className="header__links__payment" href="/">
               Оплата
             </a>
-            <a href="/" className="header__links__delivery">
+            <a className="header__links__delivery" href="/">
               Доставка
             </a>
             <a className="header__basket" href="/">

@@ -1,16 +1,13 @@
 @import '../mixins';
 
-.sort{
 
   .sort__popup{
-    position: absolute;
-    right: 0;
-    
-    background: #ffffff;
-
-    border-radius: 10px;
+    margin-left: auto;
     overflow: hidden;
-
+    @media screen and (max-width: 1080px) {
+      
+      margin-top: 25px;
+    }
     .sort__content{
       margin-left: auto;
 
@@ -26,6 +23,7 @@
 
         }
         button{
+          
           font-size: 14px;
           font-weight: 700;
 
@@ -42,6 +40,7 @@
       
     
     ul {
+    position: absolute;
     background-color: white;
 
     overflow: hidden;
@@ -73,4 +72,4 @@
     }
   }
   }
-}
+

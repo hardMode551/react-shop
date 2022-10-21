@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategoryId } from '../../Redux/Slices/categorySlice';
-import SortPopup from '../SortPopup/SortPopup';
+
 import './_SortCategories.scss';
 
 export const SortCategories = () => {

@@ -4,7 +4,7 @@
   display: flex;
   height: 377px;
   
-  @media (max-width: 820px) {
+  @media screen and (max-width: 820px) {
     height: 100%;
 
     display: flex;
@@ -19,7 +19,7 @@
   .slider__leftBlock{
     margin-right: auto;
 
-    @media (max-width: 820px) {
+    @media screen and (max-width: 820px) {
       margin: 0 auto;
       text-align: center;
     }
@@ -68,7 +68,7 @@
     width: 556px;
     height: inherit;
 
-    @media (max-width: 820px) {
+    @media screen and (max-width: 820px) {
 
       margin: 0 auto;
       margin-top: 80px;

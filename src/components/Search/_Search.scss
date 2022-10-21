@@ -1,0 +1,61 @@
+.search-area{
+
+  position: relative;
+  
+  width: 330px;
+
+  margin-left: auto;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+
+  @media screen and (max-width: 1080px) {
+
+
+    display: flex;
+    justify-content: center;
+  }
+
+
+    
+    input{
+      width: 300px;
+      height: inherit;
+
+      padding: 5px;
+      padding-left: 25px;
+      
+      font-size: 18px;
+    }
+
+    .search-icon{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      left: 4px;
+      top: 7px;
+    }
+
+    .clear-icon{
+      position: absolute;
+      
+      width: 28px;
+      height: 28px;
+      bottom: 3px;
+      
+      right: 0;
+      &:hover{
+        opacity: 1;
+      }
+    }
+
+  svg{
+    opacity: 0.5;
+  }
+
+  
+
+  
+}
