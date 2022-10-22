@@ -4,6 +4,7 @@ import CardBlock from '../../components/Cards/CardBlock';
 import SortCategories from '../../components/SortCategories/SortCategories';
 import SortPopup from '../../components/SortPopup/SortPopup';
 import Search from '../../components/Search/Search';
+import Paginate from '../../components/Paginate/Paginate';
 
 export const WoomanColection = () => {
   return (
@@ -13,6 +14,7 @@ export const WoomanColection = () => {
         <Search />
         <SortPopup />
         <CardBlock />
+        <Paginate />
       </section>
     </>
   );

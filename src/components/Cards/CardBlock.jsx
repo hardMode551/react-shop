@@ -3,7 +3,6 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 
 import Skeleton from '../../pages/Colections/Skeleton';
-import Paginate from '../Paginate/Paginate';
 
 import Cards from './Cards';
 
@@ -47,7 +46,6 @@ export const CardBlock = () => {
   return (
     <>
       <div className="card">{isLoading ? skeleton : card}</div>
-      <Paginate />
     </>
   );
 };
