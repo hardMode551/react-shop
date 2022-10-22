@@ -46,7 +46,6 @@ export const CardBlock = () => {
   return (
     <>
       <div className="card">{isLoading ? skeleton : card}</div>
-
       {/* <Paginate onChangePage={(num) => setPage(num)} /> */}
     </>
   );
