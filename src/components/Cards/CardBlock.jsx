@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useSelector } from 'react-redux';
 
 import Skeleton from '../../pages/Colections/Skeleton';
-// import Paginate from '../Paginate/Paginate';
+import Paginate from '../Paginate/Paginate';
 
 import Cards from './Cards';
 
@@ -14,6 +14,7 @@ export const CardBlock = () => {
   const categoryId = useSelector((state) => state.category.categoryId);
   const sortType = useSelector((state) => state.sort.sortId);
   const searchValue = useSelector((state) => state.search.searchValue);
+  const pageCount = useSelector((state) => state.page.pageCount);
 
   const category = categoryId > 0 ? `category=${categoryId}` : '';
 
@@ -25,13 +26,13 @@ export const CardBlock = () => {
 
     axios
       .get(
-        `https://6341d46d20f1f9d7997a8302.mockapi.io/items?${category}&sortBy=${sortBy}&order=${order}`,
+        `https://6341d46d20f1f9d7997a8302.mockapi.io/items?limit=4&page=${pageCount}&${category}&sortBy=${sortBy}&order=${order}`,
       )
       .then((res) => {
         setItems(res.data);
         setIsLoading(false);
       });
-  }, [category, sortType, searchValue]);
+  }, [category, sortType, searchValue, pageCount]);
 
   const skeleton = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
   const card = items
@@ -46,7 +47,7 @@ export const CardBlock = () => {
   return (
     <>
       <div className="card">{isLoading ? skeleton : card}</div>
-      {/* <Paginate onChangePage={(num) => setPage(num)} /> */}
+      <Paginate />
     </>
   );
 };

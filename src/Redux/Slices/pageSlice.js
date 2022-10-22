@@ -1,17 +1,17 @@
-// import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
-// export const searchSlice = createSlice({
-//   name: 'search',
-//   initialState: {
-//     searchValue: ''
-//   },
-//   reducers: {
-//     setSearchValue(state, action){
-//       state.searchValue = action.payload;
-//     },
-//   }
-// })
+export const pageSlice = createSlice({
+  name: 'page',
+  initialState: {
+    pageCount: 1
+  },
+  reducers: {
+    setPageCount(state, action){
+      state.pageCount = action.payload;
+    },
+  }
+})
 
-// export const { setSearchValue } = searchSlice.actions
+export const { setPageCount } = pageSlice.actions
 
-// export default searchSlice.reducer
+export default pageSlice.reducer
