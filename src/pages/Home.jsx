@@ -7,6 +7,7 @@ import FormBlock from '../components/Form/FormBlock';
 import InfoTitle from '../components/Info-title/InfoTitle';
 import CardBlock from '../components/Cards/CardBlock';
 
+// import { Slider, InformationBlock, Product, FormBlock, InfoTitle, CardBlock } from '../components';
 export const Home = () => {
   return (
     <>
@@ -22,7 +23,6 @@ export const Home = () => {
       <FormBlock />
       <section>
         <InfoTitle title="Зимняя распродажа!!!" />
-
         <CardBlock />
       </section>
     </>

@@ -1,0 +1,171 @@
+@import '../../components/mixins.scss';
+
+.basket{
+  max-width: 950px;
+  margin: 0 auto;
+
+  &__head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+    
+    border-bottom: 1px solid #b9b9b9;
+
+    h1{
+      font-size: 22px;
+
+      position: relative;
+
+      svg{
+        position: absolute;
+        left: -33px;
+        top: -3px;
+        width: 25px;
+      }
+    }
+
+
+
+    button{
+      border: none;
+      background-color: inherit;
+      opacity: 0.6;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      cursor: pointer;
+
+      &:hover{
+        opacity: 0.4;
+      }
+
+      svg{
+        position: absolute;
+        right: -17px;
+        opacity: 0.6;
+        width: 20px;
+      }
+    }
+  }
+
+  &__content{
+    padding: 10px;
+    margin: 30px 0 30px 0;
+    border: 1px solid #b9b9b9;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    img{
+      
+      border-radius: 12px;
+
+      width: 130px;
+      padding: 10px;
+      margin-right: 20px;
+    }
+
+    .content__title{
+      display: flex;
+      align-items: center;
+
+      width: 400px;
+
+      
+      h2{
+
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 17px;
+        padding: 10px;
+      }
+    }
+
+    .content__counter{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      width: 150px;
+
+      button{
+        width: 35px;
+        height: 35px;
+
+        @include button-style;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .delete-button{
+    font-size: 16px;
+
+    @include button-style;
+
+    width: 40px;
+    height: 40px;
+
+    background-color: #e0e0e0;
+    padding: 6px;
+    border-radius: 30px;
+    &:hover{
+      opacity: 0.5;
+      background-color: #e0e0e0;
+    }
+  }
+
+  &__footer{
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+
+    padding: 10px;
+
+    border-top: 1px solid #b9b9b9;
+    button{
+      @include button-style;
+      padding: 10px;
+    }
+  }
+}
+
+.empty-basket{
+  margin: 0 auto;
+  padding: 62px;
+
+  max-width: 650px;
+
+  border-radius: 12px;
+
+
+  background: $grey;
+  color: #2e2e2e;
+  
+  text-align: center;
+  p{
+    font-size: 42px;
+    font-weight: 700;
+  }
+  button{
+    @include button-style;
+
+    padding: 10px;
+
+    width: 60%;
+    height: 100%;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    color: rgb(46, 46, 46);
+  }
+}

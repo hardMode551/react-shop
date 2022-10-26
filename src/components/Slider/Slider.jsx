@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './SliderStyles.scss';
 
@@ -9,9 +10,9 @@ export const Slider = () => {
         <div className="slider__leftBlock">
           <h1>Летняя распродажа</h1>
           <h2>СКИДКИ ДО 70%</h2>
-          <a href="/wooman-collection">
+          <Link to="/wooman-collection">
             <button>СМОТРЕТЬ МОДЕЛИ</button>
-          </a>
+          </Link>
         </div>
         <div className="slider__rightBlock">
           <img src="./images/louis-vuitton.png" alt="dress" />

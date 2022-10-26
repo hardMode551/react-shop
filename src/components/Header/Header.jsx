@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import './HeaderStyles.scss';
 
@@ -8,6 +9,9 @@ import MenuBurger from './MenuBurger/MenuBurger';
 
 export const Header = () => {
   const [menuActive, setMenuActive] = React.useState(false);
+
+  const { items, totalPrice } = useSelector((state) => state.cart);
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
   return (
     <>
@@ -54,10 +58,10 @@ export const Header = () => {
             <a className="header__links__delivery" href="/">
               Доставка
             </a>
-            <a className="header__basket" href="/">
+            <Link className="header__basket" to="/basket">
               <img src="./images/shopping-basket.svg" alt="basket" />
-              <div className="stateBasket">0</div>
-            </a>
+              <i className="stateBasket">{totalCount}</i>
+            </Link>
           </div>
         </nav>
         <MenuBurger active={menuActive} setActive={setMenuActive} />

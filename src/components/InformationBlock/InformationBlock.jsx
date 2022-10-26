@@ -1,7 +1,7 @@
 import React from 'react';
 import './_InformationBlock.scss';
 
-const InformationBlock = () => {
+export const InformationBlock = () => {
   return (
     <>
       <div className="information">

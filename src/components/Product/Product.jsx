@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './_Product.scss';
 
 export const Product = () => {
@@ -11,9 +12,9 @@ export const Product = () => {
               <strong>МУЖСКАЯ</strong> КОЛЛЕКЦИЯ
             </h1>
             <h2>Обувь, полуверы, костюмы</h2>
-            <a href="/man-collection">
+            <Link to="/man-collection">
               <button>&#8594;</button>
-            </a>
+            </Link>
           </div>
           <img src="./images/Man.svg" alt="Man" />
         </div>
@@ -23,9 +24,9 @@ export const Product = () => {
               <strong>ЖЕНСКАЯ</strong> КОЛЛЕКЦИЯ
             </h1>
             <h2>Обувь, платья, костюмы</h2>
-            <a href="/wooman-collection">
+            <Link to="/wooman-collection">
               <button>&#8594;</button>
-            </a>
+            </Link>
           </div>
           <img src="./images/Wooman.svg" alt="Wooman" />
         </div>

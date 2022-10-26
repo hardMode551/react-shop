@@ -12,6 +12,7 @@ import NotFound from './pages/NotFound';
 import WoomanColection from './pages/Colections/WoomanColection';
 import ManColection from './pages/Colections/ManColection';
 import ChildrensColection from './pages/Colections/ChildrensColection';
+import Basket from './pages/BasketBlock/Basket'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/wooman-collection' element={<WoomanColection />}/>
           <Route path='/Man-collection' element={<ManColection />}/>
           <Route path='/childrens-collection' element={<ChildrensColection />}/>
+          <Route path='/basket' element={<Basket />}/>
           <Route path='*' element={<NotFound />}/>
         </Routes>
       
