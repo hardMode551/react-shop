@@ -34,7 +34,7 @@ const CartItem = ({ id, title, price, count, imageUrl }) => {
         <p>{count}</p>
         <button onClick={onClickPlus}>+</button>
       </div>
-      <h2>{price * count} ₽</h2>
+      <h2 className="content-totalPrice">{price * count} ₽</h2>
       <button onClick={onClickRemove} className="delete-button">
         X
       </button>

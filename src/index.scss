@@ -4,9 +4,16 @@
 *{
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
+
+  //Внутри есть оригинальные леттер спассинг для элементов
+  letter-spacing: 0.1rem;
+  // letter-spacing: 2px;
+  
     body{
       // background-color: #8730393f;
       display: block;
+
+      
       
       @media screen and (max-width: 1080px) {
         display: flex;

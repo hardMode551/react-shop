@@ -4,10 +4,22 @@
   max-width: 950px;
   margin: 0 auto;
 
+  display: flex;
+  flex-direction: column;
+
+
+  @media screen and (max-width: 820px) {
+    max-width: 700px;
+  }
+
+
   &__head{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+
+
 
     padding: 10px;
     
@@ -16,11 +28,13 @@
     h1{
       font-size: 22px;
 
+      padding-left: 25px;
+
       position: relative;
 
       svg{
         position: absolute;
-        left: -33px;
+        left: -10px;
         top: -3px;
         width: 25px;
       }
@@ -36,6 +50,8 @@
       display: flex;
       align-items: center;
 
+      padding-right: 12px;
+
       position: relative;
 
       cursor: pointer;
@@ -46,7 +62,7 @@
 
       svg{
         position: absolute;
-        right: -17px;
+        right: -10px;
         opacity: 0.6;
         width: 20px;
       }
@@ -55,13 +71,23 @@
 
   &__content{
     padding: 10px;
-    margin: 30px 0 30px 0;
+    margin: 30px 10px 30px 10px;
     border: 1px solid #b9b9b9;
     border-radius: 12px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .content-totalPrice{
+      font-size: 22px;
+      padding: 10px;
+
+      @media screen and (max-width: 820px) {
+        width: 150px;
+        text-align: center;
+      }
+    }
     
     img{
       
@@ -71,6 +97,7 @@
       padding: 10px;
       margin-right: 20px;
     }
+    
 
     .content__title{
       display: flex;
@@ -95,6 +122,11 @@
 
       width: 150px;
 
+      @media screen and (max-width: 820px) {
+        width: 100px;
+        margin-right: auto;
+      }
+
       button{
         width: 35px;
         height: 35px;
@@ -102,6 +134,9 @@
         @include button-style;
         border-radius: 20px;
       }
+
+      
+
     }
   }
 

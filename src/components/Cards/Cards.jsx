@@ -9,8 +9,6 @@ export const Cards = ({ id, imageUrl, title, price }) => {
 
   const addedCount = cartItem ? cartItem.count : 0;
 
-  console.log(addedCount);
-
   const onClickAdd = () => {
     const item = {
       id,

@@ -28,21 +28,21 @@
       font-weight: 400;
       font-size: 30px;
       line-height: 37px;
-      letter-spacing: 0.02em;
+      // letter-spacing: 0.02em;
     }
 
     h2{
       font-weight: 700;
       font-size: 55px;
       line-height: 67px;
-      letter-spacing: 0.04em;
+      // letter-spacing: 0.04em;
     }
 
     button{
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
-      letter-spacing: 0.03em;
+      // letter-spacing: 0.03em;
 
       @include button-style;      
 
@@ -88,7 +88,7 @@
       font-size: 24px;
       line-height: 29px;
       text-align: right;
-      letter-spacing: 0.05em;
+      // letter-spacing: 0.05em;
       text-decoration-line: line-through;
       text-transform: uppercase;
 
@@ -100,7 +100,7 @@
       font-size: 42px;
       line-height: 51px;
       text-align: right;
-      letter-spacing: 0.02em;
+      // letter-spacing: 0.02em;
       text-transform: uppercase;
 
       color: $red;

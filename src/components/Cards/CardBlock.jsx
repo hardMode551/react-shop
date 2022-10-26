@@ -1,9 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
-import axios from 'axios';
+
 import qs from 'qs';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from '../../Redux/Slices/filterSlice';
+import { fetchClothes } from '../../Redux/Slices/clothesSlice';
 import { sortCategories } from '../SortPopup/SortPopup';
 
 import Skeleton from '../../pages/Colections/Skeleton';
@@ -13,12 +14,14 @@ import Cards from './Cards';
 export const CardBlock = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const isSearch = React.useRef(false);
   const isMounted = React.useRef(false);
   const cardRef = React.useRef();
 
-  const [items, setItems] = React.useState([]);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const { items, status } = useSelector((state) => state.clothes);
+
+  // const [items, setItems] = React.useState([]);
 
   const categoryId = useSelector((state) => state.filter.categoryId);
   const sort = useSelector((state) => state.filter.sort);
@@ -27,21 +30,21 @@ export const CardBlock = () => {
 
   // const { categoryId, sort, searchValue, pageCount } = useSelector((state) => state.filter);
 
-  const fetchCards = () => {
-    setIsLoading(true);
+  const getClothes = async () => {
     const search = searchValue ? `search=${searchValue}` : '';
     const category = categoryId > 0 ? `category=${categoryId}` : '';
     const sortBy = sort.sortProperty.replace('-', '');
     const order = sort.sortProperty.includes('-') ? 'asc' : 'desc';
 
-    axios
-      .get(
-        `https://6341d46d20f1f9d7997a8302.mockapi.io/items?&page=${pageCount}&limit=4&${category}&sortBy=${sortBy}&order=${order}&${search}`,
-      )
-      .then((res) => {
-        setItems(res.data);
-        setIsLoading(false);
-      });
+    dispatch(
+      fetchClothes({
+        search,
+        category,
+        sortBy,
+        order,
+        pageCount,
+      }),
+    );
   };
 
   //Если изменили параметры и был первый рендер
@@ -77,10 +80,7 @@ export const CardBlock = () => {
   // Если был первый рендер, то запрашиваем карточки товара
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    if (!isSearch.current) {
-      fetchCards();
-    }
-    isSearch.current = false;
+    getClothes();
   }, [categoryId, sort.sortProperty, searchValue, pageCount]);
 
   const skeleton = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
@@ -96,9 +96,18 @@ export const CardBlock = () => {
 
   return (
     <>
-      <div ref={cardRef} className="card">
-        {isLoading ? skeleton : card}
-      </div>
+      {status === 'error' ? (
+        <div className="error">
+          <h1>Ошибка 😞</h1>
+          <p>
+            К сожалению не получилось отобразить товар, вернитесь чутка позже и мы всё починим )))
+          </p>
+        </div>
+      ) : (
+        <div ref={cardRef} className="card">
+          {status === 'loading' ? skeleton : card}
+        </div>
+      )}
     </>
   );
 };
