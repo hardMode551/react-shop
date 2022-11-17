@@ -43,7 +43,7 @@
     margin: 0 20px 20px 0;
     text-align: center;
 
-    transition: 0.55s; 
+    transition: 0.25s; 
     display: block; 
 
     @media screen and (max-width: 420px) {
@@ -51,7 +51,7 @@
     }
 
    &:hover {
-    transform: scale(1.03); 
+    transform: scale(1.02); 
    }
 
   @media screen and (max-width: 820px) {

@@ -30,3 +30,18 @@
     color: rgb(46, 46, 46);
   }
 }
+
+.workInProgressPage{
+  @media screen and (max-width: 730px) {
+    max-width: 400px;
+  }
+  p{
+    font-size: 18px;
+  }
+
+  img{
+    @media screen and (max-width: 730px) {
+      width: 400px;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 @mixin button-style {
   background: #D7B399;
-  border-radius: 12px;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
 
@@ -16,6 +16,18 @@
   }
 }
 
+@mixin disabled-button-style {
+  background-color: #b9b9b96c;
+  cursor: auto;
+  
+  &:hover{
+    background-color: #b9b9b96c;
+  }
+  &:active{
+    transform: none;
+  }
+}
+
 @mixin info-Block-style {
   background-color: #212121;
   color: #FFFFFF;
@@ -28,6 +40,7 @@
   font-weight: 500;
   font-size: 16px;
 }
+
 //#d7b39970 another variant background cards
 $background-card: #dbd9d4;
 $red: #D84033;

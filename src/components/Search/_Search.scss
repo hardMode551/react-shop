@@ -12,8 +12,6 @@
 
 
   @media screen and (max-width: 1080px) {
-
-
     display: flex;
     justify-content: center;
   }
@@ -21,6 +19,9 @@
 
     
     input{
+
+      border-radius: 6px;
+
       width: 300px;
       height: inherit;
 
