@@ -50,7 +50,6 @@ export const Cards: React.FC<CardsProps> = ({ id, imageUrl, title, price }) => {
               В корзину
               {addedCount > 0 && <p>{addedCount}</p>}
             </button>
-            
           </div>
         </div>
       </div>

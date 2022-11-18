@@ -4,7 +4,7 @@ import CardBlock from '../../components/Cards/CardBlock';
 import SortCategories from '../../components/SortCategories/SortCategories';
 import SortPopup from '../../components/SortPopup/SortPopup';
 import Search from '../../components/Search/Search';
-// import Paginate from '../../components/Paginate/Paginate';
+import Paginate from '../../components/Paginate/Paginate';
 
 export const WoomanColection: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ export const WoomanColection: React.FC = () => {
         <Search />
         <SortPopup />
         <CardBlock />
-        {/* <Paginate /> */}
+        <Paginate />
       </section>
     </>
   );

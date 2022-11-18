@@ -46,8 +46,6 @@ export const CardBlock = () => {
 
   const card = items.map((obj) => <Cards key={obj.id} {...obj} />);
   
-
-  
   return (
     <>
       {status === 'error' ? (
