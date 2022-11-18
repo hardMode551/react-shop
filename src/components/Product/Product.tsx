@@ -12,7 +12,7 @@ export const Product: React.FC = () => {
               <strong>МУЖСКАЯ</strong> КОЛЛЕКЦИЯ
             </h1>
             <h2>Обувь, полуверы, костюмы</h2>
-            <Link to="/man-collection">
+            <Link to="/in-progress">
               <button>&#8594;</button>
             </Link>
           </div>
