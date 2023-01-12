@@ -1,15 +1,14 @@
 @mixin button-style {
-  background: #D7B399;
+  background: #d7b399;
   border-radius: 6px;
   border: none;
   cursor: pointer;
 
-  
-  &:hover{
+  &:hover {
     background-color: #f0aca6;
     transition: all 0.5s;
   }
-  &:active{
+  &:active {
     background-color: #f3c6c2;
     transform: translateY(2px);
     transition: all 0.01s;
@@ -19,21 +18,28 @@
 @mixin disabled-button-style {
   background-color: #b9b9b96c;
   cursor: auto;
-  
-  &:hover{
+
+  &:hover {
     background-color: #b9b9b96c;
   }
-  &:active{
+  &:active {
     transform: none;
   }
 }
 
 @mixin info-Block-style {
   background-color: #212121;
-  color: #FFFFFF;
-  
-  margin-top: 50px;
+  color: #ffffff;
 
+  margin-top: 50px;
+}
+
+@mixin attention-Block-style {
+  border: 1px solid $grey;
+  border-radius: 12px;
+
+  background: var(--attention-background-color);
+  color: var(--text-color);
 }
 
 @mixin sort-font-styles {
@@ -41,8 +47,36 @@
   font-size: 16px;
 }
 
-//#d7b39970 another variant background cards
 $background-card: #dbd9d4;
-$red: #D84033;
-$grey: #F9F6F1;
+$red: #d84033;
+$grey: #f9f6f1;
+$green: #81db5d;
 
+html[data-theme='dark'] {
+  --background-color: #292929;
+  --text-color: #e2e2e2;
+
+  --attention-background-color: #292929;
+
+  --activeButton-background: #81db5d;
+  --activeButton-text-color: #292929;
+
+  --background-card: #303030;
+
+  --icon-color: #e2e2e2;
+  --border-color: #777777;
+}
+
+html[data-theme='light'] {
+  --background-color: #ffffff;
+  --attention-background-color: #f9f6f1;
+  --text-color: #292929;
+
+  --activeButton-background: #292929;
+  --activeButton-text-color: #ffffff;
+
+  --background-card: #dbd9d4;
+
+  --icon-color: #292929;
+  --border-color: #8a8a8a;
+}

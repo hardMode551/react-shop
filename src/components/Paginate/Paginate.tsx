@@ -3,7 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import {  setPageCount } from '../../Redux/Slices/filter/filterSlice';
 import { selectFilterByName } from '../../Redux/Slices/filter/selectors'
 
-import Pagination from '@mui/material/Pagination';
+import { Pagination } from '@mui/material';
+
+import './_Paginate.scss'
+
+
 
 const Paginate: React.FC = () => {
   const { pageCount } = useSelector(selectFilterByName);
@@ -15,7 +19,7 @@ const Paginate: React.FC = () => {
 
   return (
     <>
-      <Pagination count={4} page={pageCount} onChange={pageChange} />
+      <Pagination color="primary" variant='outlined' count={4} page={pageCount} onChange={pageChange} />
     </>
   );
 };

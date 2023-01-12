@@ -8,8 +8,8 @@ export const FormBlock: React.FC = () => {
     <>
       <div className="formBlock">
         <h1>ПОЛУЧАЙТЕ СКИДКИ И ПОДАРКИ:</h1>
-        <input ref={inputRef} type="text" placeholder="Ваш Email:" />
-        <button>ПОДПИСАТЬСЯ</button>
+        <input ref={inputRef} type="email" placeholder="Ваш Email:" />
+        <button type='submit'>ПОДПИСАТЬСЯ</button>
       </div>
     </>
   );

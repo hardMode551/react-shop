@@ -1,38 +1,33 @@
 @import '../../components/mixins.scss';
 
-.basket{
+.basket {
   max-width: 950px;
   margin: 0 auto;
 
   display: flex;
   flex-direction: column;
 
-
   @media screen and (max-width: 820px) {
     max-width: 700px;
   }
 
-
-  &__head{
+  &__head {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-
-
-
     padding: 10px;
-    
+
     border-bottom: 1px solid #b9b9b9;
 
-    h1{
+    h1 {
       font-size: 22px;
 
       padding-left: 25px;
 
       position: relative;
 
-      svg{
+      svg {
         position: absolute;
         left: -10px;
         top: -3px;
@@ -40,9 +35,7 @@
       }
     }
 
-
-
-    button{
+    button {
       border: none;
       background-color: inherit;
       opacity: 0.6;
@@ -56,11 +49,11 @@
 
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         opacity: 0.4;
       }
 
-      svg{
+      svg {
         position: absolute;
         right: -10px;
         opacity: 0.6;
@@ -69,7 +62,7 @@
     }
   }
 
-  &__content{
+  &__content {
     padding: 10px;
     margin: 30px 10px 30px 10px;
     border: 1px solid #b9b9b9;
@@ -79,7 +72,7 @@
     align-items: center;
     justify-content: space-between;
 
-    .content-totalPrice{
+    .content-totalPrice {
       font-size: 22px;
       padding: 10px;
 
@@ -88,26 +81,22 @@
         text-align: center;
       }
     }
-    
-    img{
-      
+
+    img {
       border-radius: 12px;
 
       width: 130px;
       padding: 10px;
       margin-right: 20px;
     }
-    
 
-    .content__title{
+    .content__title {
       display: flex;
       align-items: center;
 
       width: 400px;
 
-      
-      h2{
-
+      h2 {
         font-weight: 600;
         font-size: 18px;
         line-height: 17px;
@@ -115,7 +104,7 @@
       }
     }
 
-    .content__counter{
+    .content__counter {
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -127,7 +116,7 @@
         margin-right: auto;
       }
 
-      button{
+      button {
         width: 35px;
         height: 35px;
 
@@ -135,14 +124,13 @@
         border-radius: 20px;
       }
 
-      .disabledBtn{
+      .disabledBtn {
         @include disabled-button-style;
       }
-
     }
   }
 
-  .delete-button{
+  .delete-button {
     font-size: 16px;
 
     @include button-style;
@@ -153,13 +141,13 @@
     background-color: #b9b9b983;
     padding: 6px;
     border-radius: 30px;
-    &:hover{
+    &:hover {
       opacity: 0.7;
       background-color: #b9b9b983;
     }
   }
 
-  &__footer{
+  &__footer {
     display: flex;
     justify-content: space-between;
 
@@ -168,14 +156,14 @@
     padding: 10px;
 
     border-top: 1px solid #b9b9b9;
-    button{
+    button {
       @include button-style;
       padding: 10px;
     }
   }
 }
 
-.empty-basket{
+.empty-basket {
   margin: 0 auto;
   padding: 62px;
 
@@ -183,16 +171,14 @@
 
   border-radius: 12px;
 
+  @include attention-Block-style;
 
-  background: $grey;
-  color: #2e2e2e;
-  
   text-align: center;
-  p{
+  p {
     font-size: 42px;
     font-weight: 700;
   }
-  button{
+  button {
     @include button-style;
 
     padding: 10px;

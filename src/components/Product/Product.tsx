@@ -16,7 +16,7 @@ export const Product: React.FC = () => {
               <button>&#8594;</button>
             </Link>
           </div>
-          <img src="./images/Man.svg" alt="Man" />
+          <img src="./images/man.png" alt="Man" />
         </div>
         <div className="product__card">
           <div className="product__card__title">
@@ -28,7 +28,7 @@ export const Product: React.FC = () => {
               <button>&#8594;</button>
             </Link>
           </div>
-          <img src="./images/Wooman.svg" alt="Wooman" />
+          <img src="./images/wooman.png" alt="Wooman" />
         </div>
       </div>
     </>

@@ -36,7 +36,6 @@ export const Cards: React.FC<CardsProps> = ({ id, imageUrl, title, price }) => {
 
 
   return (
-    <>
       <div className="card--wrapper">
         <div className="card__title">
           <Link key={id} to={`/clothes/${id}`}>
@@ -53,7 +52,6 @@ export const Cards: React.FC<CardsProps> = ({ id, imageUrl, title, price }) => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 

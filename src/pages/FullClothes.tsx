@@ -10,6 +10,7 @@ import { addItem } from '../Redux/Slices/cart/cartSlice';
 import './Scss/_FullClothes.scss';
 import { useSelector } from 'react-redux';
 import { selectCartItemById } from '../Redux/Slices/cart/selectors';
+import { selectFilterByName } from '../Redux/Slices/filter/selectors';
 
 interface typeClothes {
   id: string;
@@ -21,6 +22,9 @@ interface typeClothes {
 }
 
 const FullClothes: React.FC = () => {
+
+const { switchOn } = useSelector(selectFilterByName);
+
 
   const { index } = useParams();
   const [clothes, setClothes] = React.useState<typeClothes>();
@@ -54,8 +58,8 @@ const FullClothes: React.FC = () => {
           width={1003}
           height={450}
           viewBox="0 0 1003 450"
-          backgroundColor="#f3f3f3"
-          foregroundColor="#ecebeb">
+          backgroundColor={switchOn ? "#212121" : '#f3f3f3'}
+          foregroundColor={switchOn ? "#272727" : "#ecebeb"}>
           <rect x="0" y="0" rx="6" ry="6" width="300" height="450" />
           <rect x="350" y="20" rx="6" ry="6" width="500" height="37" />
           <rect x="350" y="89" rx="6" ry="6" width="250" height="18" />

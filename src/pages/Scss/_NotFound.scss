@@ -1,22 +1,19 @@
 @import '../../components/mixins';
 
-.not-found-page{
+.not-found-page {
   margin: 0 auto;
   padding: 62px;
 
   max-width: 500px;
 
-  border-radius: 12px;
+  @include attention-Block-style;
 
-  background: $grey;
-  color: #2e2e2e;
-  
   text-align: center;
-  p{
+  p {
     font-size: 42px;
     font-weight: 700;
   }
-  button{
+  button {
     @include button-style;
 
     padding: 10px;
@@ -31,15 +28,23 @@
   }
 }
 
-.workInProgressPage{
+.workInProgressPage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  button {
+    margin-top: 20px;
+  }
+
   @media screen and (max-width: 730px) {
     max-width: 400px;
   }
-  p{
+  p {
     font-size: 18px;
   }
 
-  img{
+  img {
     @media screen and (max-width: 730px) {
       width: 400px;
     }

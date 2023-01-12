@@ -20,6 +20,7 @@
     "@types/react-dom": "^18.0.8",
     "axios": "^1.1.2",
     "clsx": "^1.2.1",
+    "framer-motion": "^8.4.2",
     "lodash.debounce": "^4.0.8",
     "normalize.css": "^8.0.1",
     "qs": "^6.11.0",

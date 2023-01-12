@@ -1,27 +1,24 @@
 @import '../mixins';
 
-.information{
+.information {
   height: 235px;
 
   margin-top: 107px;
 
   @include info-Block-style;
 
-
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  h1{
+  h1 {
     font-weight: 400;
     font-size: 30px;
     line-height: 37px;
-    // letter-spacing: 0.02em;
-
   }
 
-  h2{
+  h2 {
     font-weight: 100;
     font-size: 21px;
     line-height: 26px;

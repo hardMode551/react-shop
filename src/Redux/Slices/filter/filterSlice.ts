@@ -12,6 +12,7 @@ const initialState: filterSliceState = {
   },
   searchValue: '',
   pageCount: 1,
+  switchOn: false,
 }
 
 export const filterSlice = createSlice({
@@ -29,6 +30,9 @@ export const filterSlice = createSlice({
     },
     setPageCount(state, action: PayloadAction<number>){
       state.pageCount = action.payload;
+    },
+    setSwitchOn(state, action: PayloadAction<Boolean>){
+      state.switchOn = action.payload;
     },
     setFilter(state, action: PayloadAction<filterSliceState>){
       if(Object.keys(action.payload).length){
@@ -49,6 +53,6 @@ export const filterSlice = createSlice({
 
 
 
-export const { setCategoryId, setSort, setSearchValue, setPageCount, setFilter } = filterSlice.actions;
+export const { setCategoryId, setSort, setSearchValue, setPageCount, setSwitchOn, setFilter } = filterSlice.actions;
 
 export default filterSlice.reducer;

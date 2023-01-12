@@ -1,5 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './_Footer.scss';
+
+const icon = {
+  hidden: {
+    pathLength: 0,
+    fill: 'rgba(255, 255, 255, 0)',
+  },
+  visible: {
+    pathLength: 1,
+    fill: 'rgba(255, 255, 255, 1)',
+  },
+};
 
 export const Footer: React.FC = () => {
   return (
@@ -22,27 +35,29 @@ export const Footer: React.FC = () => {
           </div>
           <div className="footer__links">
             <h1>КАТЕГОРИИ</h1>
-            <a href="/">Мужская одежда</a>
-            <a href="/">Женская одежда</a>
-            <a href="/">Детская одежда</a>
+            <Link to="/in-progress">Мужская одежда</Link>
+            <Link to="/wooman-collection">Женская одежда</Link>
+            <Link to="/in-progress">Детская одежда</Link>
           </div>
           <div className="footer__links">
             <h1>ПОЛЕЗНЫЕ ССЫЛКИ</h1>
-            <a href="/">Таблица размеров</a>
+            <a href="https://wpcalc.com/razmer-odezhdy/" target="_blank" rel="noreferrer">
+              Таблица размеров
+            </a>
             <a href="/">Блог о моде</a>
             <a href="/">Наша миссия</a>
           </div>
           <div className="footer__links">
             <h1>СОЦ СЕТИ</h1>
-            <a href="/">
+            <a href="https://vk.com/" target="_blank" rel="noreferrer">
               <img src="../images/VK.svg" alt="VK" />
               VK.com
             </a>
-            <a href="/">
+            <a href="https://facebook.com/" target="_blank" rel="noreferrer">
               <img src="../images/Facebook.svg" alt="facebook" />
               Facebook
             </a>
-            <a href="/">
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
               <img src="../images/Insta.svg" alt="instagramm" />
               Instagram
             </a>

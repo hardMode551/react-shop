@@ -1,18 +1,17 @@
 @import '../mixins';
 
-.card--wrapper{
+.card--wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card{
-  
+.card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 20px;
   grid-row-gap: 20px;
-  
+
   padding-top: 60px;
 
   @media screen and (max-width: 1100px) {
@@ -24,57 +23,50 @@
     grid-column-gap: 0;
   }
 
-  @media screen and (max-width: 420px) {
-    grid-template-columns: repeat(1, 1fr);
-    grid-column-gap: 0;
-  }
-
-  
-  
-  .card__title{
+  .card__title {
     width: 210px;
     padding: 20px;
     float: left;
 
-    background: $background-card;
+    background: var(--background-card);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.418);
-    
+
     border-radius: 12px;
     margin: 0 20px 20px 0;
     text-align: center;
 
-    transition: 0.25s; 
-    display: block; 
+    transition: 0.25s;
+    display: block;
 
     @media screen and (max-width: 420px) {
       width: 390px;
     }
 
-   &:hover {
-    transform: scale(1.02); 
-   }
+    &:hover {
+      transform: scale(1.02);
+    }
 
-  @media screen and (max-width: 820px) {
-    width: 260px;
-  }
- 
+    @media screen and (max-width: 820px) {
+      width: 260px;
+    }
+
     .card__title__name,
-    .card__title__price{
+    .card__title__price {
       margin: 20px;
       background: $grey;
       border-radius: 6px;
       text-align: center;
     }
-    
 
-    .card__title__name{
+    .card__title__name {
+      color: #292929;
       padding: 5px;
       font-weight: 600;
       font-size: 18px;
       line-height: 17px;
     }
 
-    .card__title__price{
+    .card__title__price {
       font-weight: 700;
       font-size: 18px;
       line-height: 22px;
@@ -82,25 +74,25 @@
       margin: 0 auto;
     }
 
-    .card__title__price{
+    .card__title__price {
       color: #d84133;
     }
 
-    .card__buttons{
+    .card__buttons {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
 
-      button{
+      button {
         margin: 12px 6px;
         padding: 10px;
         border-radius: 12px;
         @include button-style;
         box-shadow: 0px 0px 78px -12px #000000;
       }
-  
-      .card__basketButton{
+
+      .card__basketButton {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -108,8 +100,8 @@
         max-height: 40px;
         @include button-style;
         background-color: #8730398c;
-       
-        p{
+
+        p {
           background-color: #873039;
           border-radius: 30px;
           color: wheat;
@@ -126,7 +118,7 @@
           height: 12px;
         }
 
-        img{
+        img {
           margin-left: 15px;
           width: 20px;
           height: 20px;
@@ -135,7 +127,7 @@
       }
     }
 
-    img{
+    img {
       border-radius: 12px;
       width: 210px;
       height: 300px;
@@ -143,20 +135,16 @@
   }
 }
 
-.error{
+.error {
   margin: 100px auto;
   text-align: center;
   width: 600px;
-  h1{
-
+  h1 {
     font-size: 42px;
     font-weight: 700;
   }
 
-  p{
+  p {
     font-size: 24px;
-
-
   }
-
 }

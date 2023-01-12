@@ -1,7 +1,6 @@
 @import '../mixins';
 
-.sort{
-
+.sort {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -10,42 +9,41 @@
     justify-content: center;
   }
 
-  &__categories{
+  &__categories {
     width: 100%;
-    background-color: $grey;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
     box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.171);
-    
+
     border-radius: 12px;
     padding: 5px 20px 5px 20px;
-    
-    .active{
-      background-color: #212121;
-      color: white;
+
+    .active {
+      background-color: var(--activeButton-background);
+      color: var(--activeButton-text-color);
     }
-  
-    ul{
+
+    ul {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      
-      margin-left:  0;
+
+      margin-left: 0;
       padding-left: 0;
-      
-      li{
+
+      li {
         @include sort-font-styles;
-  
+
         border: 1px solid #212121;
         border-radius: 12px;
         list-style-type: none;
-  
+
         margin: 8px;
         padding: 10px;
-        
+
         cursor: pointer;
       }
     }
   }
-  
-
-  
 }

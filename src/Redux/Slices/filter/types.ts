@@ -17,4 +17,5 @@ export interface filterSliceState {
     sort: Sort;
     searchValue: string;
     pageCount: number;
+    switchOn: Boolean;
 }
